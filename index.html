@@ -38,35 +38,25 @@ nav a{
  background-position:center;
  color:white;
  text-align:center;
- padding:110px 20px;
+ padding:120px 20px;
 }
 .hero h1{font-size:42px}
 .hero p{margin-top:10px;font-size:18px}
-.btn{
- display:inline-block;
- margin-top:20px;
- background:#ff9800;
- color:white;
- padding:12px 25px;
- border-radius:6px;
- text-decoration:none;
- font-weight:bold;
-}
 
 /* GENERAL */
 .container{
  max-width:1100px;
  margin:auto;
- padding:40px 15px;
+ padding:50px 15px;
 }
 .section-title{
  text-align:center;
  font-size:32px;
- margin-bottom:25px;
+ margin-bottom:30px;
  color:#0b1a33;
 }
 
-/* CARDS */
+/* SERVICE CARDS */
 .grid{
  display:grid;
  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
@@ -91,47 +81,66 @@ nav a{
  border-radius:10px;
  box-shadow:0 4px 12px rgba(0,0,0,.1);
  text-align:center;
+ line-height:1.7;
 }
 
 /* PROJECT GALLERY */
 .gallery{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-    gap:20px;
-    align-items:center;
-}
-
-.gallery img{
-    width:100%;
-    height:220px;
-    object-fit:cover;
-    border-radius:12px;
-    box-shadow:0 4px 12px rgba(0,0,0,0.15);
-    transition:0.3s;
-}
-
-.gallery img:hover{
-    transform:scale(1.05);
-    box-shadow:0 8px 20px rgba(0,0,0,0.25);
+ display:grid;
+ grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+ gap:20px;
 }
 .gallery img{
  width:100%;
- height:180px;
+ height:220px;
  object-fit:cover;
- border-radius:10px;
+ border-radius:12px;
+ box-shadow:0 4px 12px rgba(0,0,0,0.15);
+ transition:.3s;
+}
+.gallery img:hover{
+ transform:scale(1.05);
+ box-shadow:0 8px 20px rgba(0,0,0,.25);
 }
 
 /* CONTACT */
-.contact{
- text-align:center;
- background:white;
- padding:30px;
- border-radius:10px;
- box-shadow:0 4px 12px rgba(0,0,0,.1);
+.contact-section{
+ display:flex;
+ justify-content:center;
+ padding:60px 20px;
 }
-.contact p{margin:10px 0;font-size:18px}
+.contact-card{
+ background:white;
+ padding:40px;
+ border-radius:14px;
+ box-shadow:0 6px 18px rgba(0,0,0,.12);
+ max-width:520px;
+ width:100%;
+}
+.contact-card h2{
+ text-align:center;
+ color:#001d4a;
+ margin-bottom:10px;
+}
+.contact-sub{
+ text-align:center;
+ color:#666;
+ margin-bottom:20px;
+}
+.contact-card p{
+ font-size:18px;
+ margin:12px 0;
+}
+.contact-card a{
+ color:#001d4a;
+ text-decoration:none;
+ font-weight:600;
+}
+.contact-card a:hover{
+ color:#0077b5;
+}
 
-/* WHATSAPP BUTTON */
+/* WHATSAPP FLOAT BUTTON */
 .whatsapp{
  position:fixed;
  bottom:20px;
@@ -172,7 +181,6 @@ footer{
 <section class="hero">
 <h1>JRR Enterprises</h1>
 <p>Professional Mechanical Design Services</p>
-<a class="btn" href="#contact">Get Quote</a>
 </section>
 
 <!-- SERVICES -->
@@ -233,22 +241,27 @@ machine development, fabrication drawings and industrial engineering support.
 <h2 class="section-title">Project Gallery</h2>
 
 <div class="gallery">
-  <img src="projects/project-1.png">
-  <img src="projects/project-2.jpeg">
-  <img src="projects/project-3.jpeg">
-  <img src="projects/project-4.jpeg">
-  <img src="projects/project-5.png">
+<img src="projects/project-1.png">
+<img src="projects/project-2.jpeg">
+<img src="projects/project-3.jpeg">
+<img src="projects/project-4.jpeg">
+<img src="projects/project-5.png">
 </div>
-
 </section>
 
 <!-- CONTACT -->
-<section id="contact" class="container">
-<div class="contact">
+<section id="contact" class="contact-section">
+<div class="contact-card">
+
 <h2>Contact Us</h2>
-<p>📞 +91 7502185499</p>
+<p class="contact-sub">For Mechanical Design & Engineering Support</p>
+
+<p>📞 <a href="tel:+917502185499">+91 7502185499</a></p>
+<p>💬 <a href="https://wa.me/917502185499" target="_blank">WhatsApp Us</a></p>
+<p>✉️ <a href="mailto:jrrenterprises.in@gmail.com">jrrenterprises.in@gmail.com</a></p>
+<p>💼 <a href="https://www.linkedin.com/in/ranjith-design-engineer" target="_blank">Connect on LinkedIn</a></p>
 <p>📍 Tamil Nadu, India</p>
-<p>✉️ jrrenterprises.in</p>
+
 </div>
 </section>
 
@@ -259,45 +272,5 @@ machine development, fabrication drawings and industrial engineering support.
 © 2026 JRR Enterprises | Mechanical Design Services
 </footer>
 
-</body>
-</html><h3>Mechanical Design</h3>
-<ul>
-<li>3D Modeling & Product Design</li>
-<li>Machine Design & Development</li>
-<li>Sheet Metal Design</li>
-<li>CAD Drafting & Detailing</li>
-</ul>
-</div>
-
-<div class="card">
-<img src="https://images.unsplash.com/photo-1581092335878-4e7fbb54f1f4?auto=format&fit=crop&w=800&q=80">
-<h3>Engineering Support</h3>
-<ul>
-<li>Design Calculations</li>
-<li>Tolerance & Fit Analysis</li>
-<li>Material Selection</li>
-<li>Reverse Engineering</li>
-</ul>
-</div>
-
-<div class="card">
-<img src="https://images.unsplash.com/photo-1581092160562-40aa08e78837?auto=format&fit=crop&w=800&q=80">
-<h3>Specialized Design</h3>
-<ul>
-<li>Fixture & Jig Design</li>
-<li>Automation & Conveyor Design</li>
-<li>Custom Industrial Equipment</li>
-</ul>
-</div>
-
-</div>
-</div>
-
-<footer>
-© 2026 JRR Enterprises | Mechanical Design Services
-</footer>
-
-</body>
-</html>
 </body>
 </html>
