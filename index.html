@@ -3,106 +3,145 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>JRR Enterprises - Mechanical Design Services</title>
+<title>JRR Enterprises | Mechanical Design Services</title>
 
 <style>
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background: #f5f5f5;
+body{
+    margin:0;
+    font-family:Arial, sans-serif;
+    background:#f4f6f8;
+    color:#222;
 }
 
-header {
-    background: #0f172a;
-    color: white;
-    padding: 30px;
-    text-align: center;
+/* HERO */
+.hero{
+    background:url('https://images.unsplash.com/photo-1581092160607-ee22731b6f1b?auto=format&fit=crop&w=1400&q=80');
+    background-size:cover;
+    background-position:center;
+    color:white;
+    text-align:center;
+    padding:90px 20px;
+}
+.hero h1{
+    font-size:38px;
+    margin:0;
+}
+.hero p{
+    font-size:18px;
+    margin-top:10px;
 }
 
-header h1 {
-    margin: 0;
-    font-size: 32px;
+/* SECTION */
+.container{
+    max-width:1100px;
+    margin:auto;
+    padding:30px 15px;
 }
 
-section {
-    padding: 40px 20px;
-    max-width: 1000px;
-    margin: auto;
+.section-title{
+    text-align:center;
+    font-size:30px;
+    margin-bottom:25px;
+    color:#0b1a33;
 }
 
-.card {
-    background: white;
-    padding: 20px;
-    margin: 15px 0;
-    border-radius: 10px;
-    box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+/* CARDS */
+.grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:20px;
 }
 
-h2 {
-    color: #0f172a;
+.card{
+    background:white;
+    border-radius:12px;
+    overflow:hidden;
+    box-shadow:0 4px 12px rgba(0,0,0,0.1);
 }
 
-ul {
-    line-height: 1.8;
+.card img{
+    width:100%;
+    height:180px;
+    object-fit:cover;
 }
 
-footer {
-    background: #0f172a;
-    color: white;
-    text-align: center;
-    padding: 20px;
-    margin-top: 30px;
+.card h3{
+    margin:15px;
+    color:#0b1a33;
+}
+
+.card ul{
+    padding:0 20px 20px;
+    margin:0;
+    line-height:1.7;
+}
+
+/* FOOTER */
+footer{
+    background:#0b1a33;
+    color:white;
+    text-align:center;
+    padding:20px;
+    margin-top:30px;
 }
 </style>
-
 </head>
 
 <body>
 
-<header>
+<!-- HERO -->
+<section class="hero">
     <h1>JRR Enterprises</h1>
     <p>Professional Mechanical Design Services</p>
-</header>
-
-<section>
-    <div class="card">
-        <h2>Our Services</h2>
-        <ul>
-            <li>3D Modeling & Product Design</li>
-            <li>Machine Design & Development</li>
-            <li>Sheet Metal Design</li>
-            <li>Fabrication & Structural Design</li>
-            <li>CAD Drafting & Detailing</li>
-            <li>BOM Preparation & Assembly Drawings</li>
-        </ul>
-    </div>
-
-    <div class="card">
-        <h2>Engineering Support</h2>
-        <ul>
-            <li>Design Calculations</li>
-            <li>Tolerance & Fit Analysis</li>
-            <li>Material Selection</li>
-            <li>DFMA Support</li>
-            <li>Reverse Engineering</li>
-        </ul>
-    </div>
-
-    <div class="card">
-        <h2>Specialized Design</h2>
-        <ul>
-            <li>Environmental Test Chamber Design</li>
-            <li>Fixture & Jig Design</li>
-            <li>Automation & Conveyor Design</li>
-            <li>Custom Industrial Equipment Design</li>
-        </ul>
-    </div>
 </section>
 
+<!-- SERVICES -->
+<div class="container">
+<h2 class="section-title">Our Services</h2>
+
+<div class="grid">
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1581092918484-8313b9c5f3f8?auto=format&fit=crop&w=800&q=80">
+<h3>Mechanical Design</h3>
+<ul>
+<li>3D Modeling & Product Design</li>
+<li>Machine Design & Development</li>
+<li>Sheet Metal Design</li>
+<li>CAD Drafting & Detailing</li>
+</ul>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1581092335878-4e7fbb54f1f4?auto=format&fit=crop&w=800&q=80">
+<h3>Engineering Support</h3>
+<ul>
+<li>Design Calculations</li>
+<li>Tolerance & Fit Analysis</li>
+<li>Material Selection</li>
+<li>Reverse Engineering</li>
+</ul>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1581092160562-40aa08e78837?auto=format&fit=crop&w=800&q=80">
+<h3>Specialized Design</h3>
+<ul>
+<li>Environmental Chamber Design</li>
+<li>Fixture & Jig Design</li>
+<li>Automation & Conveyor Design</li>
+<li>Custom Industrial Equipment</li>
+</ul>
+</div>
+
+</div>
+</div>
+
 <footer>
-    <p>© 2026 JRR Enterprises | Mechanical Design Services</p>
+© 2026 JRR Enterprises | Mechanical Design Services
 </footer>
 
+</body>
+</html>
 </body>
 </html>
