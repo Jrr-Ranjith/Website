@@ -6,104 +6,243 @@
 <title>JRR Enterprises | Mechanical Design Services</title>
 
 <style>
-body{
-    margin:0;
-    font-family:Arial, sans-serif;
-    background:#f4f6f8;
-    color:#222;
+*{margin:0;padding:0;box-sizing:border-box;font-family:Arial}
+body{background:#f4f6f8;color:#222;scroll-behavior:smooth}
+
+/* NAVBAR */
+nav{
+ position:fixed;
+ top:0;left:0;width:100%;
+ background:#0b1a33;
+ padding:12px 20px;
+ z-index:1000;
+}
+nav ul{
+ display:flex;
+ justify-content:center;
+ list-style:none;
+ gap:25px;
+}
+nav a{
+ color:white;
+ text-decoration:none;
+ font-weight:bold;
 }
 
 /* HERO */
 .hero{
-    background:url('https://images.unsplash.com/photo-1581092160607-ee22731b6f1b?auto=format&fit=crop&w=1400&q=80');
-    background-size:cover;
-    background-position:center;
-    color:white;
-    text-align:center;
-    padding:90px 20px;
+ margin-top:50px;
+ background:linear-gradient(rgba(0,0,0,.65),rgba(0,0,0,.65)),
+ url('https://images.pexels.com/photos/3862132/pexels-photo-3862132.jpeg');
+ background-size:cover;
+ background-position:center;
+ color:white;
+ text-align:center;
+ padding:110px 20px;
 }
-.hero h1{
-    font-size:38px;
-    margin:0;
-}
-.hero p{
-    font-size:18px;
-    margin-top:10px;
+.hero h1{font-size:42px}
+.hero p{margin-top:10px;font-size:18px}
+.btn{
+ display:inline-block;
+ margin-top:20px;
+ background:#ff9800;
+ color:white;
+ padding:12px 25px;
+ border-radius:6px;
+ text-decoration:none;
+ font-weight:bold;
 }
 
-/* SECTION */
+/* GENERAL */
 .container{
-    max-width:1100px;
-    margin:auto;
-    padding:30px 15px;
+ max-width:1100px;
+ margin:auto;
+ padding:40px 15px;
 }
-
 .section-title{
-    text-align:center;
-    font-size:30px;
-    margin-bottom:25px;
-    color:#0b1a33;
+ text-align:center;
+ font-size:32px;
+ margin-bottom:25px;
+ color:#0b1a33;
 }
 
 /* CARDS */
 .grid{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-    gap:20px;
+ display:grid;
+ grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+ gap:20px;
 }
-
 .card{
-    background:white;
-    border-radius:12px;
-    overflow:hidden;
-    box-shadow:0 4px 12px rgba(0,0,0,0.1);
+ background:white;
+ border-radius:12px;
+ overflow:hidden;
+ box-shadow:0 4px 12px rgba(0,0,0,.1);
+ transition:.3s;
+}
+.card:hover{transform:translateY(-6px)}
+.card img{width:100%;height:180px;object-fit:cover}
+.card h3{margin:15px;color:#0b1a33}
+.card ul{padding:0 20px 20px;line-height:1.8}
+
+/* ABOUT */
+.about{
+ background:white;
+ padding:35px;
+ border-radius:10px;
+ box-shadow:0 4px 12px rgba(0,0,0,.1);
+ text-align:center;
 }
 
-.card img{
-    width:100%;
-    height:180px;
-    object-fit:cover;
+/* PROJECT GALLERY */
+.gallery{
+ display:grid;
+ grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+ gap:15px;
+}
+.gallery img{
+ width:100%;
+ height:180px;
+ object-fit:cover;
+ border-radius:10px;
 }
 
-.card h3{
-    margin:15px;
-    color:#0b1a33;
+/* CONTACT */
+.contact{
+ text-align:center;
+ background:white;
+ padding:30px;
+ border-radius:10px;
+ box-shadow:0 4px 12px rgba(0,0,0,.1);
 }
+.contact p{margin:10px 0;font-size:18px}
 
-.card ul{
-    padding:0 20px 20px;
-    margin:0;
-    line-height:1.7;
+/* WHATSAPP BUTTON */
+.whatsapp{
+ position:fixed;
+ bottom:20px;
+ right:20px;
+ background:#25D366;
+ color:white;
+ padding:14px 16px;
+ border-radius:50%;
+ font-size:22px;
+ text-decoration:none;
+ box-shadow:0 4px 10px rgba(0,0,0,.3);
 }
 
 /* FOOTER */
 footer{
-    background:#0b1a33;
-    color:white;
-    text-align:center;
-    padding:20px;
-    margin-top:30px;
+ background:#0b1a33;
+ color:white;
+ text-align:center;
+ padding:18px;
+ margin-top:20px;
 }
 </style>
 </head>
 
 <body>
 
+<!-- NAV -->
+<nav>
+<ul>
+<li><a href="#services">Services</a></li>
+<li><a href="#about">About</a></li>
+<li><a href="#projects">Projects</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
+</nav>
+
 <!-- HERO -->
 <section class="hero">
-    <h1>JRR Enterprises</h1>
-    <p>Professional Mechanical Design Services</p>
+<h1>JRR Enterprises</h1>
+<p>Professional Mechanical Design Services</p>
+<a class="btn" href="#contact">Get Quote</a>
 </section>
 
 <!-- SERVICES -->
-<div class="container">
+<section id="services" class="container">
 <h2 class="section-title">Our Services</h2>
 
 <div class="grid">
 
 <div class="card">
-<img src="https://images.unsplash.com/photo-1581092918484-8313b9c5f3f8?auto=format&fit=crop&w=800&q=80">
+<img src="https://images.pexels.com/photos/159358/construction-site-build-construction-work-159358.jpeg">
 <h3>Mechanical Design</h3>
+<ul>
+<li>3D Modeling & Product Design</li>
+<li>Machine Design & Development</li>
+<li>Sheet Metal Design</li>
+<li>CAD Drafting & Detailing</li>
+</ul>
+</div>
+
+<div class="card">
+<img src="https://images.pexels.com/photos/256381/pexels-photo-256381.jpeg">
+<h3>Engineering Support</h3>
+<ul>
+<li>Design Calculations</li>
+<li>Tolerance & Fit Analysis</li>
+<li>Material Selection</li>
+<li>Reverse Engineering</li>
+</ul>
+</div>
+
+<div class="card">
+<img src="https://images.pexels.com/photos/3862130/pexels-photo-3862130.jpeg">
+<h3>Specialized Design</h3>
+<ul>
+<li>Environmental Chamber Design</li>
+<li>Fixture & Jig Design</li>
+<li>Automation & Conveyor Design</li>
+<li>Custom Industrial Equipment</li>
+</ul>
+</div>
+
+</div>
+</section>
+
+<!-- ABOUT -->
+<section id="about" class="container">
+<div class="about">
+<h2>About JRR Enterprises</h2>
+<p>
+We provide reliable and professional mechanical design solutions including CAD modeling,
+machine development, fabrication drawings and industrial engineering support.
+</p>
+</div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects" class="container">
+<h2 class="section-title">Project Gallery</h2>
+<div class="gallery">
+<img src="https://images.pexels.com/photos/3912982/pexels-photo-3912982.jpeg">
+<img src="https://images.pexels.com/photos/159298/gears-cogs-machine-machinery-159298.jpeg">
+<img src="https://images.pexels.com/photos/1108572/pexels-photo-1108572.jpeg">
+<img src="https://images.pexels.com/photos/2760243/pexels-photo-2760243.jpeg">
+</div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="container">
+<div class="contact">
+<h2>Contact Us</h2>
+<p>📞 +91 7502185499</p>
+<p>📍 Tamil Nadu, India</p>
+<p>✉️ jrrenterprises.in</p>
+</div>
+</section>
+
+<!-- WHATSAPP -->
+<a class="whatsapp" href="https://wa.me/917502185499">💬</a>
+
+<footer>
+© 2026 JRR Enterprises | Mechanical Design Services
+</footer>
+
+</body>
+</html><h3>Mechanical Design</h3>
 <ul>
 <li>3D Modeling & Product Design</li>
 <li>Machine Design & Development</li>
@@ -127,7 +266,6 @@ footer{
 <img src="https://images.unsplash.com/photo-1581092160562-40aa08e78837?auto=format&fit=crop&w=800&q=80">
 <h3>Specialized Design</h3>
 <ul>
-<li>Environmental Chamber Design</li>
 <li>Fixture & Jig Design</li>
 <li>Automation & Conveyor Design</li>
 <li>Custom Industrial Equipment</li>
